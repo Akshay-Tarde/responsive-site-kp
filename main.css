@@ -1,0 +1,22 @@
+body {
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+
+/*Typography*/
+.title {
+  font-size: 3.375rem;
+  font-family: "Lora", serif;
+  color: #143774;
+}
+.subtitle {
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  color: #1792d2;
+}
+.navbar {
+  font-size: 1rem;
+}
+a {
+  color: #707070;
+}
