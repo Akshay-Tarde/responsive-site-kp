@@ -18,7 +18,7 @@ header {
 }
 
 .title {
-  font-size: 3.375rem;
+  font-size: 2rem;
   font-weight: 400;
   font-family: "Lora", serif;
   color: #143774;
@@ -54,7 +54,7 @@ a:hover {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  border: 1px solid magenta;
+  /* border: 1px solid magenta; */
 }
 .container-flex {
   display: flex;
@@ -99,4 +99,43 @@ li {
 }
 .current-state:hover {
   color: #707070;
+}
+/*main section typography*/
+.article-title,
+.widget-title {
+  font-family: "Lora", serif;
+  color: #143774;
+  font-size: 1.5rem;
+}
+.widget-recent-post-title {
+  font-family: "Lora", serif;
+  color: #143774;
+}
+
+.article-body {
+  font-size: 1.125rem;
+  font-weight: light;
+  color: #707070;
+}
+.article-read-more {
+  font-size: 0.875rem;
+  color: #1792d2;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+}
+
+/*main section layout*/
+
+.container-main {
+  display: flex;
+}
+
+.article-recent-flex {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.article-image {
+  height: 200px;
+  width: 90%;
+  object-fit: cover;
 }
