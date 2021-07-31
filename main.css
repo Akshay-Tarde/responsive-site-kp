@@ -1,26 +1,44 @@
 body {
   margin: 0 auto;
+  font-family: "Lora", serif;
+}
+
+img {
+  width: 100%;
+  display: block;
+  margin-top: 2rem;
 }
 
 /*Typography*/
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
 header {
   background-color: #f8f8f8;
   padding: 2rem 0;
+  margin-bottom: 3em;
+  text-align: center;
 }
-
+footer {
+  background-color: #143774;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+footer h3,
+p {
+  margin: 0 auto 0.2em;
+}
+/*----------------------------------------*/
 .heading {
   margin: 0;
-}
-@media (max-width: 675px) {
-  .heading {
-    margin: auto;
-  }
 }
 
 .title {
   font-size: 2rem;
   font-weight: 400;
-  font-family: "Lora", serif;
   color: #143774;
   margin: 0;
 }
@@ -48,6 +66,34 @@ a:hover {
   color: black;
 }
 
+/*main section typography*/
+.article-title,
+.widget-title {
+  color: #143774;
+  font-size: 1.5rem;
+}
+.widget-recent-post-title {
+  color: #143774;
+}
+
+.article-body {
+  font-size: 1.125rem;
+  font-weight: light;
+  color: #707070;
+}
+strong {
+  font-weight: bold;
+}
+.article-read-more,
+.article-info {
+  font-size: 0.875rem;
+  margin-top: 2rem;
+}
+.article-read-more {
+  color: #1792d2;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+}
 /*Layout*/
 
 .container {
@@ -59,16 +105,27 @@ a:hover {
 .container-flex {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
-@media (max-width: 675px) {
+
+@media (min-width: 675px) {
   .container-flex {
-    flex-direction: column;
+    flex-direction: row;
   }
   .heading {
     margin: auto;
   }
+  main {
+    width: 65%;
+  }
+  aside {
+    width: 30%;
+    max-width: 200px;
+    margin-left: 1em;
+  }
 }
 
+/*nav bar*/
 .navbar {
   text-transform: uppercase;
   text-align: center;
@@ -100,42 +157,103 @@ li {
 .current-state:hover {
   color: #707070;
 }
-/*main section typography*/
-.article-title,
-.widget-title {
-  font-family: "Lora", serif;
-  color: #143774;
-  font-size: 1.5rem;
-}
-.widget-recent-post-title {
-  font-family: "Lora", serif;
-  color: #143774;
+
+/*article featured layout*/
+
+.article-featured {
+  padding-bottom: 2em;
+  border-bottom: #707070 1px solid;
 }
 
-.article-body {
-  font-size: 1.125rem;
-  font-weight: light;
-  color: #707070;
-}
-.article-read-more {
-  font-size: 0.875rem;
-  color: #1792d2;
-  font-family: "Ubuntu", sans-serif;
-  text-transform: uppercase;
-}
-
-/*main section layout*/
-
-.container-main {
+.article-recent {
   display: flex;
+  flex-direction: column;
+}
+.article-recent-main {
+  order: 2;
+}
+.article-recent-secondary {
+  order: 1;
 }
 
-.article-recent-flex {
-  display: flex;
-  flex-direction: row-reverse;
+@media (min-width: 675px) {
+  .article-recent {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em 0;
+  }
+  .article-recent-main {
+    width: 60%;
+  }
+  .article-featured {
+    display: flex;
+    flex-direction: column;
+  }
+  .article-recent-secondary {
+    width: 30%;
+  }
+  .article-image {
+    order: -2;
+  }
+  .article-info {
+    order: -1;
+    margin-bottom: 2em;
+  }
+  .article-image-one {
+    margin-top: 0;
+  }
+  /* .article-title {
+    order: 3;
+  }
+  .article-body {
+    order: 4;
+  }
+  .article-read-more {
+    order: 5;
+  } */
 }
-.article-image {
-  height: 200px;
-  width: 90%;
-  object-fit: cover;
+
+/*widgets*/
+@media (min-width: 675px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+  .widget-image {
+    min-height: 30%;
+    max-width: 70%;
+    object-fit: cover;
+    margin: auto;
+  }
+  .widget-title,
+  .widget-recent-post-title {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1em;
+    /* font-size: 0.75rem; */
+  }
+  .widget-title {
+    text-transform: uppercase;
+  }
+  .sidebar-widget {
+    border: rgb(237, 236, 236) 20px solid;
+    margin-bottom: 3em;
+    padding: 1em;
+  }
+  .widget-recent-post {
+    display: flex;
+    flex-direction: column-reverse;
+    border-bottom: #707070 1px solid;
+    margin-bottom: 2em;
+  }
+
+  /* .widget-recent-post:last-child {
+    margin: 0;
+    border: 0;
+  } */
+
+  .widget-body {
+    color: #1792d2;
+    font-family: "Ubuntu", sans-serif;
+  }
 }
