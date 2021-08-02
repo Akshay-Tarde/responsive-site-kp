@@ -247,13 +247,20 @@ li {
     margin-bottom: 2em;
   }
 
-  /* .widget-recent-post:last-child {
+  .widget-recent-post:last-child {
     margin: 0;
     border: 0;
-  } */
+  }
 
   .widget-body {
     color: #1792d2;
     font-family: "Ubuntu", sans-serif;
   }
+}
+
+/*about me page image*/
+.image-full {
+  max-height: 15rem;
+  width: 100%;
+  object-fit: cover;
 }
