@@ -1,6 +1,7 @@
 body {
   margin: 0 auto;
   font-family: "Lora", serif;
+  line-height: 1.6;
 }
 
 img {
@@ -21,9 +22,15 @@ header {
   margin-bottom: 3em;
   text-align: center;
 }
+
+strong {
+  font-weight: 700;
+  color: black;
+}
+
 footer {
   background-color: #143774;
-  color: white;
+  color: rgba(255, 255, 255, 0.65);
   padding: 3rem 0;
   text-align: center;
 }
@@ -48,6 +55,7 @@ p {
   font-family: "Ubuntu", sans-serif;
   color: #1792d2;
   text-transform: uppercase;
+  letter-spacing: 1px;
   margin: 0;
 }
 .navbar {
@@ -57,6 +65,7 @@ a {
   color: #707070;
   font-weight: 700;
   text-decoration: none;
+  letter-spacing: 2px;
   padding: 0.25rem 0;
 }
 a:focus {
@@ -78,12 +87,10 @@ a:hover {
 
 .article-body {
   font-size: 1.125rem;
-  font-weight: light;
+
   color: #707070;
 }
-strong {
-  font-weight: bold;
-}
+
 .article-read-more,
 .article-info {
   font-size: 0.875rem;
@@ -92,7 +99,9 @@ strong {
 .article-read-more {
   color: #1792d2;
   font-family: "Ubuntu", sans-serif;
+
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 /*Layout*/
 
@@ -230,10 +239,12 @@ li {
     font-size: 1rem;
     text-align: center;
     margin-top: 1em;
-    /* font-size: 0.75rem; */
+
+    /* font-size: 0.275rem; */
   }
   .widget-title {
     text-transform: uppercase;
+    letter-spacing: 2px;
   }
   .sidebar-widget {
     border: rgb(237, 236, 236) 20px solid;
